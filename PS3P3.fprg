@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="super"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-02 08:28:39 PM"/>
+        <attribute name="created" value="c3VwZXI7REVTS1RPUC0ySzNRT1FNOzIwMjItMDItMDI7MDg6MTg6MDQgUE07MjkxMQ=="/>
+        <attribute name="edited" value="c3VwZXI7REVTS1RPUC0ySzNRT1FNOzIwMjItMDItMDI7MDg6Mjg6MzkgUE07MTszMDI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Books" type="Real" array="False" size=""/>
+            <declare name="bookcost" type="Real" array="False" size=""/>
+            <declare name="shipping" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter quantity of books&quot;" newline="True"/>
+            <input variable="qty"/>
+            <output expression="&quot;Enter cost per book&quot;" newline="True"/>
+            <input variable="cost"/>
+            <if expression="cost &lt;= 50.00">
+                <then>
+                    <assign variable="shipping" expression="0.00"/>
+                </then>
+                <else>
+                    <assign variable="shipping" expression="25.00"/>
+                </else>
+            </if>
+            <assign variable="total" expression="books * bookcost"/>
+            <output expression="&quot;Quantity of books&quot; &amp; qty" newline="True"/>
+            <output expression="&quot;Total cost&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
